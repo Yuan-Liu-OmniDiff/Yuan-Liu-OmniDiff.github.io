@@ -1,6 +1,6 @@
 # OmniDiff: A Comprehensive Benchmark for Fine-grained Image Difference Captioning
 
-This is the repository that contains source code for the [OmniDiff website](https://YuanLiu-OmniDiff.github.io).
+This is the repository that contains source code for the [OmniDiff website](https://Yuan-Liu-OmniDiff.github.io).
 
 If you find OmniDiff useful for your work please cite:
 ```
