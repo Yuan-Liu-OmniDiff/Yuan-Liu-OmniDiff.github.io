@@ -1,0 +1,97 @@
+.footer a {
+    color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-title {
+    margin: 10px 0 10px 0 !important;
+}
+
+.publication-banner {
+    height: 300px;
+    background-size: cover;
+}
+
+.publication-header .hero-body {
+    padding-bottom: 0 !important;
+}
+
+.publication-title {
+    color: #000;
+    width: fit-content;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    line-height: 1.15;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+    font-size: 1.15rem;
+}
+
+.publication-authors {
+    width: fit-content;
+    font-size: 1.1rem;
+}
+
+/* Author name styling (used in both author line and affiliations) */
+.publication-authors:not(.publication-affiliations) .author-block {
+    font-weight: 600;
+    font-size: 1.0em;
+}
+
+/* Affiliation styling (keep slightly smaller than author line, but still prominent) */
+.publication-affiliations {
+    font-size: 0.6rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    .publication-title {
+        font-size: 1.8rem;
+    }
+
+    .publication-venue,
+    .publication-awards,
+    .publication-authors {
+        font-size: 1rem;
+    }
+
+    .publication-authors:not(.publication-affiliations) .author-block {
+        font-size: 1.08em;
+    }
+}
+
+.publication-authors a {
+    color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

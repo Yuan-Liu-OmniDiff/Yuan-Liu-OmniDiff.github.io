@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>OmniDiff: A Comprehensive Benchmark for Fine-grained</title>
+
+  <!-- Google Tag Manager -->
+  <script async="" src="http://www.google-analytics.com/analytics.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-THP5XBK"></script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-THP5XBK');</script>
+  <!-- End Google Tag Manager -->
+
+  <link href="./static/css/fontawesome.all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+  <link href="./static/css/bulma.min.css" rel="stylesheet">
+  <link href="./static/css/index.css" rel="stylesheet">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-72422365-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+
+
+  <!-- <section class="hero">
+    <div class="hero-body publication-banner" style="background-image: url(./static/images/background.jpg)">
+    </div>
+  </section> -->
+
+  <section class="hero publication-header">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-two-thirds">
+            <span class="is-size-6 publication-venue">International Conference on Computer Vision (ICCV) 2025</span>
+            <span class="is-size-6 is-bold publication-awards">&nbsp;&nbsp; Honolulu, Hawai'i</span>
+
+            <h1 class="title is-1 publication-title">OmniDiff: A Comprehensive Benchmark for Fine-grained
+              Image Difference Captioning</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block author-block-"><a href="https://scholar.google.com/citations?user=vAohKSQAAAAJ&hl=zh-CN&oi=sra">Yuan Liu</a><sup>1</sup>, </span>
+              <span class="author-block author-block-"><a href="https://housaihui.cn/">Saihui Hou</a><sup>1</sup>, </span>
+              <span class="author-block author-block-"><a href="https://scholar.google.com/citations?hl=zh-CN&user=QBDtcpsAAAAJ&view_op=list_works&gmla=ANZ5fUO8rxDPe3EPFRCrYJL1qtppjos52vzUFFaC4BByi52p3hOxz-e9sS_3bLSpKP8CI8YgyZjqzIeehbtwzfIQQSBOZ2zCqoF3UoHH38M">Saijie Hou</a><sup>2</sup>, </span>
+              <span class="author-block author-block-">Jiabao Du<sup>1</sup>, </span>
+              <span class="author-block author-block-"><a href="https://dreamshibei.github.io/">Shibei Meng</a><sup>1</sup>, </span>
+              <span class="author-block author-block-"><a href="https://ai.bnu.edu.cn/xygk/szdw/zgj/bfed57e2f8fc4de2a6b370063517f801.htm">Yongzhen Huang</a><sup>1,3,†</sup></span>
+            </div>
+
+            <div class="is-size-6 publication-authors publication-affiliations">
+              <span class="author-block author-block-"><sup>1</sup>School of Artificial Intelligence, Beijing Normal
+                University</span><br>
+              <span class="author-block author-block-"><sup>2</sup>School of Artificial Intelligence, Beijing University
+                of Posts and Telecommunications</span><br>
+              <span class="author-block author-block-"><sup>3</sup>WATRIX.AI</span>
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block link-block-">
+                <a class="external-link button is-small is-rounded is-link" style="font-size:0.8rem;font-weight:500;"
+                  href="https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_OmniDiff_A_Comprehensive_Benchmark_for_Fine-grained_Image_Difference_Captioning_ICCV_2025_paper.pdf">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (ICCV, 0.88 MB)</span>
+                </a>
+              </span>
+              <span class="link-block link-block-">
+                <a class="external-link button is-small is-rounded is-link"
+                  style="background:#FF3B30;border-color:#FF3B30;font-size:0.8rem;font-weight:500;"
+                  href="https://arxiv.org/pdf/2503.11093">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (Arxiv, 48.4 MB)</span>
+                </a>
+              </span>
+
+              <!-- <span class="link-block link-block-">
+                <a class="external-link button is-small is-rounded is-link"
+                  style="background:#24292e;border-color:#24292e;font-size:0.8rem;font-weight:500;" href="">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (M<sup>3</sup>Diff)</span>
+                </a>
+              </span> -->
+              <span class="link-block link-block-">
+                <a class="external-link button is-small is-rounded is-link"
+                  style="background:#FBBF24;border-color:#FBBF24;font-size:0.8rem;font-weight:500;"
+                  href="https://huggingface.co/datasets/IVC-liuyuan/OmniDiff">
+                  <span class="icon"><i class="fas fa-database"></i></span>
+                  <span>Dataset (OmniDiff)</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- 
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <img src="./static/images/banner.jpg" alt="OmniDiff banner">
+        </div>
+      </div> -->
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <div class="content has-text-justified">
+            <h3>Abstract</h3>
+            <p>Image Difference Captioning (IDC) aims to generate natural language descriptions of subtle differences
+              between image pairs, requiring both precise visual change localization and coherent semantic expression.
+              Despite recent advancements, existing datasets often lack breadth and depth, limiting their applicability
+              in complex and dynamic environments: (1) from a breadth perspective, current datasets are constrained to
+              limited variations of objects in specific scenes, and (2) from a depth perspective, prior benchmarks often
+              provide overly simplistic descriptions. To address these challenges, we introduce
+              <strong>OmniDiff</strong>, a
+              comprehensive dataset comprising 324 diverse scenarios—spanning real-world complex environments and 3D
+              synthetic settings—with fine-grained human annotations averaging 60 words in length and covering 12
+              distinct change types. Building on this foundation, we propose <strong>M<sup>3</sup>Diff</strong>, a
+              <strong>M</strong>ulti<strong>M</strong>odal large language model enhanced by a plug-and-play
+              <strong>M</strong>ulti-scale
+              <strong>Diff</strong>erential Perception (MDP) module. This module improves the model's ability to
+              accurately identify and describe inter-image differences while maintaining the foundational model's
+              generalization
+              capabilities. With the addition of the OmniDiff dataset, M<sup>3</sup>Diff achieves SOTA
+              performance
+              across multiple benchmarks, including Spot-the-Diff, IEdit, CLEVR-Change, CLEVR-DC, and OmniDiff,
+              demonstrating significant improvements in cross-scenario difference recognition accuracy compared to
+              existing methods. The dataset, code, and models will be made publicly available to support further
+              research.
+            </p>
+          </div>
+          <img src="./static/images/banner.jpg" alt="OmniDiff banner" style="width: 95%;">
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="columns is-centered">
+          <div class="column is-two-thirds">
+            <h3>Method and Dataset</h3>
+            <ul>
+              <!-- <li>All
+                of the code relevant to this project is available on <a class="external-link"
+                  href="">Github</a>.
+              </li> -->
+
+              <li> Dataset of OmniDiff we collected is available on <a class="external-link"
+                  href="https://huggingface.co/datasets/IVC-liuyuan/OmniDiff">HuggingFace</a>.
+              </li>
+            </ul>
+
+            <center><img src="./static/images/method.png" style="width: 80%;" /></center>
+            <span>
+              <center>The whole structure of M<sup>3</sup>Diff with the multi-scale differential perception module.
+              </center></span><br/>
+
+              <img src="./static/images/dataset.png" />
+              <span>
+                <center>The comparison of OmniDiff with existing image difference caption datasets.</center>
+              </span>
+
+              <h3>OmniDiff Benchmark Results</h3>
+              <img src="./static/images/results.png" />
+              <span>
+                <center>Performance comparison on OmniDiff across all metrics. The best results are highlighted in bold face, while the second-best results are indicated with underlining. † indicates models that are trained without utilizing the OmniDiff dataset.</center>
+              </span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="columns is-centered">
+          <pre><code>@article{liu2025omnidiff,
+  title={OmniDiff: A Comprehensive Benchmark for Fine-grained Image Difference Captioning},
+  author={Yuan Liu and Saihui Hou and Saijie Hou and Jiabao Du and Shibei Meng and Yongzhen Huang},
+  journal={International Conference on Computer Vision (ICCV)},
+  year={2025}
+}
+</code></pre>
+        </div>
+      </div>
+  </section>
+
+
+  <footer class="footer">
+    <p>
+      <center>The website code was modified from the <a href="https://photoshape.github.io/">PhotoShape</a>
+        project by <a href="https://pengpenglang.github.io/">pengpenglang</a>. Thanks for their excellent work❤️~
+      </center>
+    </p>
+  </footer>
+
+</body>
+
+</html>
